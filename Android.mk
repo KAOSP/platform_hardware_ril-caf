@@ -1,5 +1,4 @@
+ifeq ($(TARGET_RIL_VARIANT),caf)
 RIL_PATH := $(call my-dir)
-
-#ifeq ($(RIL_PATH),$(call project-path-for,ril))
-include $(call first-makefiles-under,$(RIL_PATH))
-#endif
+include $(call first-makefiles-under,$(call my-dir))
+endif
